@@ -1,0 +1,17 @@
+
+  {
+    "Information":[
+        "dogs",
+        "cats",
+        "snakes",
+        "computers",
+        "birds",
+        "cactuses"
+    ],
+    "Converts": [
+      "hex",
+      "base64",
+      "text",
+      "binary"
+    ]
+  }
