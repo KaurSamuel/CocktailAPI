@@ -12,6 +12,19 @@ import java.util.Random;
 
 public class APIService {
 
+    public static List<String> getUpdateAPI(int amount){
+
+        List<String> APIs = new ArrayList<String>();
+        for (int i = 0; i < amount; i++) {
+            String API = "An API that updates " + getRandom("Updates");
+            if (new Random().nextInt(2) == 1) {
+                API = API.concat(" based on "+ getRandom("Based"));
+            }
+            APIs.add(API);
+        }
+        return APIs;
+    }
+
     public static List<String> getInformationAPI(int amount){
 
         List<String> APIs = new ArrayList<String>();
@@ -59,7 +72,7 @@ public class APIService {
     }
 
     private static String getFullRandomAPI(){
-        String [] types = {"Information","Converts","Calculates"};
+        String [] types = {"Information","Converts","Calculates","Updates"};
         switch (types[new Random().nextInt(types.length)]){
             case "Information":
                 return getInformationAPI(1).get(0);

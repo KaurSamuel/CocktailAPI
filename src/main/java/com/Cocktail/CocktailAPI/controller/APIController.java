@@ -10,6 +10,11 @@ import java.util.List;
 @RestController
 public class APIController {
 
+    @GetMapping("/getAPI/update/{amount}")
+    public List<String> getUpdateAPI(@PathVariable int amount){
+        return APIService.getUpdateAPI(amount);
+    }
+
     @GetMapping("/getAPI/information/{amount}")
     public List<String> getInformationAPI(@PathVariable int amount){
         return APIService.getInformationAPI(amount);
